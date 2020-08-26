@@ -103,20 +103,22 @@
 
 //Задание 1 js 12 
 
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?'); // тут все правильно 
 
 const personalMovieDB = {
     count: numberOfFilms,
-    movies: { a:'b' },
+    movies: {}, // не правильно, смотри ниже
     actors: {},
     genres:[],
     privat: false
-};
+}; // тут тоже все правильно
 
 const a = prompt('Один из последних просмотренных фильмов?');
 const b = prompt('На сколько оцените его?');
 
+personalMovieDB.movies[a] = b;
 
+console.log(personalMovieDB.movies);
 
 
 
