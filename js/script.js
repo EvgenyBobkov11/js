@@ -101,6 +101,21 @@
 
 //console.log(isChecked  || !isClose);
 
+//Задание 1 js 12 
+
+const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: { a:'b' },
+    actors: {},
+    genres:[],
+    privat: false
+};
+
+const a = prompt('Один из последних просмотренных фильмов?');
+const b = prompt('На сколько оцените его?');
+
 
 
 
