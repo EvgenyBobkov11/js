@@ -118,8 +118,6 @@ const b = prompt('На сколько оцените его?');
 
 personalMovieDB.movies[a] = b;
 
-console.log(personalMovieDB.movies);
-
 
 
 
