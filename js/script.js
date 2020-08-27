@@ -229,8 +229,8 @@ if (numberOfFilms == '') {
     console.log('Произошла ошибка');
 } */
 
-while (numberOfFilms == '') {
-    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+/* while (numberOfFilms == '') {
+    numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
 }
 
 const personalMovieDB = {
@@ -266,6 +266,48 @@ for (let i = 0; i <2; i++) {
 }
 
 console.log(personalMovieDB.movies);
+
+*/
+
+// Функции
+let num = 20;
+
+function showFirstMessage (text) {
+    console.log(text);
+    num = 80;
+    console.log(num); // будет равно 10, так как эта команда локальная
+}
+
+showFirstMessage('Hello world');
+console.log(num);
+
+// имя функции должно показывать что она означает
+// Аргументы через запятую 
+// Если объявляем переменную внутри функции, то она локальная
+// бля сложно, но кароче если локальная переменная записана просто (нам = 80) то в консоль будет выводиться 80, а если она записана как лэт нам ( то будет выводиться глобальная переменная)
+
+function calc(a,b) {
+    return (a + b);
+}
+
+console.log(calc(4,3));
+
+console.log(calc(5,6));
+
+console.log(calc(14,1232));
+
+function ret() {
+    let num = 50;
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+
+
+
+
 
 
 
