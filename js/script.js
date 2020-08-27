@@ -103,6 +103,8 @@
 
 //Задание 1 js 12 
 
+
+/*
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?'); // тут все правильно 
 
 const personalMovieDB = {
@@ -118,9 +120,152 @@ const b = prompt('На сколько оцените его?');
 
 personalMovieDB.movies[a] = b;
 
+console.log(personalMovieDB.movies);
+
+*/
+
+/*
+
+// IF условия
+
+if (4 == 9) {
+    console.log('ok');
+} else {
+    console.log('Error');
+}
+
+// если в условии будет одно число ( то будет true)
+
+const num = 50;
+
+if (num < 49) {
+    console.log('error');
+} else if (num > 100) {
+    console.log("Mnogo");
+} else {
+    console.log("ok");
+}
+
+(num == 50) ? console.log("ok") : console.log('error');
+
+// "?" - тернарный оператор ( потому что три слова)
+
+//const num = 50;
+
+// switch идет на строгое сравнение
+
+switch (num) {
+    case 49:
+        console.log('error');
+        break;
+    case 100:
+        console.log('error');
+        break;
+    case 50:
+        console.log('Ok');
+        break;
+    default:
+        console.log('not that time');    
+}
+
+// со строчными элементами все работает точно также 
+
+*/
+//циклы
+
+/*
+
+let num = 50;
+
+while (num <= 55) {
+    console.log(num);
+    num++;
+}
+
+do {
+    console.log(num);
+    num++;
+}
+while(num < 55);
+
+for (let i = 1; i < 8; i++ ) {
+    console.log(i)
+}
+
+for (let i = 1; i < 8; i++ ) {
+    if (i === 6) {
+        break;
+    }
+    console.log(i);
+}
 
 
+for (let i = 1; i < 10; i++ ) {
+    if (i === 6) {
+        continue;
+    }
+    console.log(i);
+}
+*/
 
+
+// задание к 15 уроку
+
+let numberOfFilms = ('');
+/*
+
+let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+if (numberOfFilms == '') {
+    console.log('Неверное значение, пустая строка');
+    numberOfFilms = ('');
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+} else if (numberOfFilms < 10) {
+    console.log('Просмотрено довольно мало фильмов');
+} else if (10 <= numberOfFilms <= 30) {
+    console.log('Вы классический зритель');
+} else if (numberOfFilms > 30) {
+    console.log('Вы киноман');
+} else {
+    console.log('Произошла ошибка');
+} */
+
+while (numberOfFilms == '') {
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+}
+
+const personalMovieDB = {
+    count: +numberOfFilms,
+    movies: {}, 
+    actors: {},
+    genres:[],
+    privat: false
+};
+
+if (personalMovieDB.count < 10) {
+    console.log('Просмотрено довольно мало фильмов');
+} else if (10 <= personalMovieDB.count && personalMovieDB.count <= 30 ) {
+    console.log('Вы классический зритель');
+} else if (30 < personalMovieDB.count ) {
+    console.log('Вы киноман');
+} else {
+    console.log('Произошла ошибка');
+}
+
+
+for (let i = 0; i <2; i++) {
+    const a = prompt('Один из последних просмотренных фильмов?'),
+        b = prompt('На сколько оцените его?');
+
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('Done');
+    } else {
+        console.log('ВВедите коректные данные!!!');
+        i--;
+    }    
+}
+
+console.log(personalMovieDB.movies);
 
 
 
