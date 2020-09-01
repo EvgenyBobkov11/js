@@ -305,6 +305,19 @@ const anotherNum = ret();
 console.log(anotherNum);
 
 
+const logger = function() {
+    console.log('Hello');
+
+}; // ставим точку с запятой когда функция вторая
+
+logger();
+
+// стрелочка функция
+
+const calcQ = (a,b) => {return a + b; };
+
+
+
 
 
 
