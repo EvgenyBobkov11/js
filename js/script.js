@@ -103,8 +103,8 @@
 
 //Задание 1 js 12 
 
-
 /*
+
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?'); // тут все правильно 
 
 const personalMovieDB = {
@@ -122,9 +122,9 @@ personalMovieDB.movies[a] = b;
 
 console.log(personalMovieDB.movies);
 
-*/
 
-/*
+
+
 
 // IF условия
 
@@ -211,9 +211,9 @@ for (let i = 1; i < 10; i++ ) {
 
 // задание к 15 уроку
 
-let numberOfFilms = ('');
-/*
+//
 
+/*
 let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
 if (numberOfFilms == '') {
     console.log('Неверное значение, пустая строка');
@@ -227,12 +227,15 @@ if (numberOfFilms == '') {
     console.log('Вы киноман');
 } else {
     console.log('Произошла ошибка');
-} */
+} 
 
-/* while (numberOfFilms == '') {
+
+
+let numberOfFilms = ('');
+
+while ( numberOfFilms == '') {
     numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
 }
-
 const personalMovieDB = {
     count: +numberOfFilms,
     movies: {}, 
@@ -268,6 +271,8 @@ for (let i = 0; i <2; i++) {
 console.log(personalMovieDB.movies);
 
 */
+
+
 
 // Функции
 let num = 20;
@@ -316,6 +321,51 @@ logger();
 
 const calcQ = (a,b) => {return a + b; };
 
+// если функция в одну строчку, то фигурные скобки можно убрать
+
+// Если один аргумент, то можно тоже не ставить скобки
+
+// методы 16 урок
+
+const str = "test";
+const arr = ['1', 'adwd', '2121'];
+
+console.log(arr.length);
+console.log(str[2]); // вторую букву вывожу
+
+
+// у строки есть методы и свойства (1 свойство) искать в официальной документаци
+
+console.log(str.toUpperCase());
+console.log(str.toLowerCase()); // ну тут понятно регистр
+
+const fruit = "Some fruit";
+
+console.log(fruit.indexOf("fruit"));
+
+const logg = "Hello world";
+
+console.log(logg.slice(6,11));
+
+// когда мы используем слайс, мы указваеи до какого момента, но не включая
+
+// Если один аргумент в слайсе, то вся стока обрезается до конка
+
+
+console.log(logg.substring(6,11)); // почти тоже самое но с особенностями
+
+console.log(logg.substr(6,5)); // второй аргумент это длинна скольео обрезаем, первый это начало
+
+const nam = 12.2;
+
+console.log(Math.round(nam));
+
+const test2 = "12.2px";
+
+console.log(parseInt(test2));
+console.log(parseFloat(test2));
+
+// превращает в другую систему измерения ( тут например из строки в число, ахуеть же, ну...)
 
 
 
@@ -329,3 +379,52 @@ const calcQ = (a,b) => {return a + b; };
 
 
 
+
+'use strict';
+
+// Код возьмите из предыдущего домашнего задания
+
+
+let numberOfFilms = ('');
+
+while ( numberOfFilms == '') {
+    numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+}
+
+function start() {
+    
+}
+
+const personalMovieDB = {
+    count: +numberOfFilms,
+    movies: {}, 
+    actors: {},
+    genres:[],
+    privat: false
+};
+
+if (personalMovieDB.count < 10) {
+    console.log('Просмотрено довольно мало фильмов');
+} else if (10 <= personalMovieDB.count && personalMovieDB.count <= 30 ) {
+    console.log('Вы классический зритель');
+} else if (30 < personalMovieDB.count ) {
+    console.log('Вы киноман');
+} else {
+    console.log('Произошла ошибка');
+}
+
+
+for (let i = 0; i <2; i++) {
+    const a = prompt('Один из последних просмотренных фильмов?'),
+        b = prompt('На сколько оцените его?');
+
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('Done');
+    } else {
+        console.log('ВВедите коректные данные!!!');
+        i--;
+    }    
+}
+
+console.log(personalMovieDB.movies);
